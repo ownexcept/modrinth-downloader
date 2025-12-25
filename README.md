@@ -28,45 +28,6 @@ Example - Download specific projects:
 python modrinth_dl.py -p "fabric-api,sodium,lithium" -l fabric -v 1.20.1
 ```
 
-## Features
-- **Search functionality** - Search for projects directly from CLI with filters
-- **Download from collections** - Download all projects from a Modrinth collection
-- **Smart version matching** - Automatically select compatible versions based on MC version and loader
-- **Resume + retry** - Robust download with automatic resume and exponential backoff retry
-- **Update mode** (-u) - Intelligently replace outdated files with latest compatible versions
-- **Modpack support** - Extract .mrpack files and automatically download their dependencies
-- **Parallel processing** - Configurable multi-threading for faster downloads
-- **Plugin loader support** - Automatically detect and organize plugin loader projects
-- **Direct Minecraft integration** - Automatically organize files by type
-- **Fully configurable** - Extensive command-line flags for customization
-
-<details>
-<summary><strong>To-Do List...</strong></summary>
-
-**Currently the development is slow down, due personal reasons**
-
-- Optimizing code **(Priority)**
-- Add unit tests with pytest
-- Create package distribution (PyPI)
-
-</details>
-
-## Notes
-- Files are automatically organized by type (mods/, plugins/, resourcepacks/, shaderpacks/, datapacks/, etc.)
-- Plugin loaders (Bukkit, Paper, Spigot, etc.) automatically use plugins/ folder
-- Project mappings are persisted in `projectid.csv` for tracking (Updating)
-- Comprehensive logs are stored in `download.log` with structured formatting
-- All downloads support resume capability via HTTP Range requests
-- Configuration is immutable and validated at creation time
-- Network connectivity is verified before operations begin
-- Exit Codes: `0`: Success, `1`: General error, `130`: Interrupted by user (Ctrl+C)
-
-## Requirements
-- Python 3.8 or higher
-- Standard library only (no external dependencies)
-- Internet connection for API access
-- Sufficient disk space for downloads
-
 <details>
 <summary><strong>Advanced Usage</strong></summary>
 
@@ -109,6 +70,45 @@ python modrinth_dl.py -p "sodium" -l fabric -v 1.20.1 -i "version_id1,version_id
 ```
 
 </details>
+
+## Features
+- **Search functionality** - Search for projects directly from CLI with filters
+- **Download from collections** - Download all projects from a Modrinth collection
+- **Smart version matching** - Automatically select compatible versions based on MC version and loader
+- **Resume + retry** - Robust download with automatic resume and exponential backoff retry
+- **Update mode** (-u) - Intelligently replace outdated files with latest compatible versions
+- **Modpack support** - Extract .mrpack files and automatically download their dependencies
+- **Parallel processing** - Configurable multi-threading for faster downloads
+- **Plugin loader support** - Automatically detect and organize plugin loader projects
+- **Direct Minecraft integration** - Automatically organize files by type
+- **Fully configurable** - Extensive command-line flags for customization
+
+<details>
+<summary><strong>To-Do List...</strong></summary>
+
+**Currently the development is slow down, due personal reasons**
+
+- Optimizing code **(Priority)**
+- Add unit tests with pytest
+- Create package distribution (PyPI)
+
+</details>
+
+## Notes
+- Files are automatically organized by type (mods/, plugins/, resourcepacks/, shaderpacks/, datapacks/, etc.)
+- Plugin loaders (Bukkit, Paper, Spigot, etc.) automatically use plugins/ folder
+- Project mappings are persisted in `projectid.csv` for tracking (Updating)
+- Comprehensive logs are stored in `download.log` with structured formatting
+- All downloads support resume capability via HTTP Range requests
+- Configuration is immutable and validated at creation time
+- Network connectivity is verified before operations begin
+- Exit Codes: `0`: Success, `1`: General error, `130`: Interrupted by user (Ctrl+C)
+
+## Requirements
+- Python 3.8 or higher
+- Standard library only (no external dependencies)
+- Internet connection for API access
+- Sufficient disk space for downloads
 
 ## License
 This project is released under the Apache-2.0 license.
