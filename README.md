@@ -10,6 +10,22 @@ A downloader for **Modrinth**, with features including search capabilities, auto
 
 </details>
 
+## Requirements
+- Python 3.8 or higher
+- Standard library only (no external dependencies)
+- Internet connection for API access
+- Sufficient disk space for downloads
+
+## Installation
+**Use curl**
+```bash
+curl -L -o modrinth_dl.py https://raw.githubusercontent.com/ownexcept/modrinth-downloader/refs/heads/main/modrinth_dl.py
+```
+or **Clone this repository**
+```bash
+git clone https://github.com/ownexcept/modrinth-downloader.git && cd modrinth-downloader
+```
+
 ## Usage
 Display full help:
 ```bash
@@ -90,7 +106,7 @@ python modrinth_dl.py -p "sodium" -l fabric -v 1.20.1 -i "version_id1,version_id
 
 - Optimizing code **(Priority)**
 - Add unit tests with pytest
-- Create package distribution (PyPI)
+- Create package distribution (PyPI) **(Probably no)**
 
 </details>
 
@@ -103,12 +119,6 @@ python modrinth_dl.py -p "sodium" -l fabric -v 1.20.1 -i "version_id1,version_id
 - Configuration is immutable and validated at creation time
 - Network connectivity is verified before operations begin
 - Exit Codes: `0`: Success, `1`: General error, `130`: Interrupted by user (Ctrl+C)
-
-## Requirements
-- Python 3.8 or higher
-- Standard library only (no external dependencies)
-- Internet connection for API access
-- Sufficient disk space for downloads
 
 ## License
 This project is released under the Apache-2.0 license.
