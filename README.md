@@ -2,7 +2,7 @@
 
 A downloader for **Modrinth**, with features including search capabilities, automatic version matching, resumable downloads, and modpack extraction.
 
-> **Currently the development is slowed down, due personal reasons**
+> **NOTE: Currently the development is paused (repository will be archived).**
 
 ## Requirements
 - Python 3.10 or higher
